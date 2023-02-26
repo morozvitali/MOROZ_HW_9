@@ -1,30 +1,30 @@
 # MOROZ_HW_9
 ДЗ 9. Работа с файлами
 
-1. Створити клас filelogger.FileLogger. Клас здійснюватиме логування (протоколування)
+1. Створити клас filelogger.filelogger.FileLogger. Клас здійснюватиме логування (протоколування)
 інформації в зазначений файл на підставі конфігураційного об'єкта.
 
-2. Створити перелік filelogger.LoggingLevel. Складається із значень: INFO, DEBUG. 
+2. Створити перелік filelogger.logger.LoggingLevel. Складається із значень: INFO, DEBUG. 
 Таблиця видимості:
 | LEVEL | INFO | DEBUG |
 | INFO   | X | |   
 | DEBUG | X | X |
 Тобто, якщо активовано рівень DEBUG, то його також включається INFO, але не навпаки.
 
-3. Створити клас filelogger.FileLoggerConfiguration. Клас представляє конфігурацію для логування.
+3. Створити клас filelogger.filelogger.FileLoggerConfiguration. Клас представляє конфігурацію для логування.
 Складається з властивостей: файл, куди буде записуватися інформація, поточний рівень логування,
 максимальний розмір файлу (в байтах), формат для запису в файл. 
 
-3. У класі filelogger.FileLogger. Створити методи debug та info, які як параметр приймають рядок-повідомлення.
+3. У класі filelogger.filelogger.FileLogger. Створити методи debug та info, які як параметр приймають рядок-повідомлення.
 Метод повинен виконувати запис у вказаний у конфігурації файл у встановленому форматі для запису з конфігурації. 
 Формат запису: [ПОТОЧНИЙ_ЧАС][DEBUG] Повідомлення: [СТРОКА-ПОВІДОМЛЕННЯ]
 
 4. При виконанні методів debug та info врахувати максимально допустимий розмір файлу, куди будуть записуватися логи.
-При досягненні максимального розміру файлу або його перевищення, викинути виняток FileMaxSizeReachedException
+При досягненні максимального розміру файлу або його перевищення, викинути виняток exception.FileMaxSizeReachedException
 з повідомленням максимального і поточного розміру файлу, шляхи до файлу.
 
-5. * Створити клас filelogger.FileLoggerConfigurationLoader. Об'єкт даного типу за допомогою методу load,
-завантажуватиме конфігурацію для логування із зазначеного файлу. Метод повертає об'єкт типу filelogger.FileLoggerConfiguration.
+5. * Створити клас filelogger.filelogger.FileLoggerConfigurationLoader. Об'єкт даного типу за допомогою методу load,
+завантажуватиме конфігурацію для логування із зазначеного файлу. Метод повертає об'єкт типу filelogger.filelogger.FileLoggerConfiguration.
 Зміст файлу:
 FILE: ТУТ_ШЛЯХ_До_ФАЙЛУ
 LEVEL: ТУТ_РІВЕНЬ
@@ -44,7 +44,7 @@ Log_11.11.2021-13:11.txt
 не буде потреби зміни коду в місцях застосування логування. Відбувається лише підміна реалізації.
 Виклик logger.info("test log") буде однакового працювати при файловому або консольному логуванні.
 Наприклад, може бути: 
-filelogger.FileLogger, filelogger.FileLoggerConfiguration, filelogger.FileLoggerConfigurationLoader
+filelogger.filelogger.FileLogger, filelogger.filelogger.FileLoggerConfiguration, filelogger.filelogger.FileLoggerConfigurationLoader
 StdoutLogger, StdoutLoggerConfiguration, StdoutLoggerConfigurationLoader
 ВАЖЛИВО! StdoutXXX реалізувати необов'язково, але система повинна бути до реалізації нового сімейства з можливістю управління "всім як одним".
 Це завдання виконати окремою гілкою git.
