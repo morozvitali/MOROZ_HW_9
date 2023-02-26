@@ -1,3 +1,5 @@
+package src.main.java.hillel.hw.filelogger;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -7,7 +9,7 @@ import java.util.Arrays;
 import java.util.Properties;
 
 public class FileLoggerConfigurationLoader {
-    private static final String path = "property.properties";
+    private static final String path = "src/main/java/hillel/hw/logger/property.properties";
     public static FileLoggerConfiguration load() {
         Properties properties = new Properties();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path));) {

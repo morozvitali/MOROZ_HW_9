@@ -1,3 +1,5 @@
+package src.main.java.hillel.hw.filelogger;
+
 public class FileLoggerConfiguration {
     private final String path;
     private final LoggingLevel loggingLevel;

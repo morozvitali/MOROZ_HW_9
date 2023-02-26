@@ -1,3 +1,7 @@
+package src.main.java.hillel.hw.filelogger;
+
+import src.main.java.hillel.hw.logger.Logger;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
