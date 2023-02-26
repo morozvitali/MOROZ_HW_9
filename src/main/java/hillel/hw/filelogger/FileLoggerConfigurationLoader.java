@@ -1,7 +1,6 @@
-package filelogger;
+package src.main.java.hillel.hw.filelogger;
 
-import filelogger.FileLoggerConfiguration;
-import logger.LoggingLevel;
+import src.main.java.hillel.hw.logger.LoggingLevel;
 
 import java.io.BufferedReader;
 import java.io.File;

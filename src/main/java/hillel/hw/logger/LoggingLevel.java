@@ -1,4 +1,4 @@
-package logger;
+package src.main.java.hillel.hw.logger;
 
 public enum LoggingLevel {
     INFO,

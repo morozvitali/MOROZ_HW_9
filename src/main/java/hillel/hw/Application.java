@@ -1,6 +1,8 @@
-import filelogger.FileLogger;
-import filelogger.FileLoggerConfiguration;
-import filelogger.FileLoggerConfigurationLoader;
+package src.main.java.hillel.hw;
+
+import src.main.java.hillel.hw.filelogger.FileLogger;
+import src.main.java.hillel.hw.filelogger.FileLoggerConfiguration;
+import src.main.java.hillel.hw.filelogger.FileLoggerConfigurationLoader;
 
 import java.io.File;
 import java.io.IOException;
